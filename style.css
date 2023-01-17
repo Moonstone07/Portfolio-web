@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Mulish:wght@200;400;700&display=swap');
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -77,16 +80,16 @@ h6 {
 
 /* pages colors */
 .home {
-  /* background-color: #e2f3f6; */
+  background-color: rgb(184, 203, 214);
 }
 
 .about {
-  /* background-color: #6b4d57ff; */
+  background-color: #688690;
+  font-family: lora, serif;
+  color: aliceblue;
 }
 
-.work {
-  /* background-color: #f7f4deff; */
-}
+.work {}
 
 /* navbar section */
 nav {
@@ -99,7 +102,7 @@ nav a {
   text-decoration: none;
   color: black;
   padding: 1em;
-  font-family: sans-serif;
+  font-family: mulish, sans-serif;
   font-size: 1.2em;
   font-weight: 200;
 }
@@ -114,7 +117,7 @@ nav a:first-child {
   position: absolute;
   width: 6px;
   height: 6px;
-  background-color: black;
+  background-color: aliceblue;
   border-radius: 50%;
   top: 8%;
   left: 6%;
@@ -134,16 +137,16 @@ a:nth-child(1):hover~.dot {
 }
 
 a:nth-child(2):hover~.dot {
-  -webkit-transform: translateX(1060px);
-  transform: translateX(1060px);
+  -webkit-transform: translateX(1070px);
+  transform: translateX(1070px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 a:nth-child(3):hover~.dot {
-  -webkit-transform: translateX(1148px);
-  transform: translateX(1148px);
+  -webkit-transform: translateX(1160px);
+  transform: translateX(1160px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
@@ -163,6 +166,7 @@ h1 {
   padding: 1em;
   font-family: sans-serif;
   font-weight: 400;
+  font-family: lora, serif;
 }
 
 .profile-picture {
@@ -204,12 +208,15 @@ h1 {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: ;
+  background-color: #F1F5F9;
+  border-radius: 1em;
 }
 
 .text {
   color: black;
   font-size: 20px;
+  font-family: mulish, sans-serif;
+  font-weight: 700;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -239,7 +246,7 @@ li {
 
 .cta-email {
   background-color: black;
-  /* color: #e2f3f6; */
+  color: rgb(184, 203, 214);
   text-decoration: none;
   border-radius: 1.5em;
   border: none;
@@ -254,3 +261,46 @@ li {
   font-size: 2.5em;
   margin-left: .3em;
 }
+
+.quote {
+  margin: 5em;
+}
+
+.quote-text {
+  font-size: 4em;
+  line-height: 1.2em;
+  margin-bottom: .5em;
+}
+
+.quote-author {}
+
+#resume article {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  margin: auto;
+  gap: 1em;
+}
+
+#resume article>h2 {
+  flex: 0 0 400px;
+}
+
+/*
+-
+-||||-
+-||||-
+-||||-
+-
+class="two-col-grid"
+*/
+
+
+
+
+/* color palette
+#688690
+#F1F5F9
+#0C1B33
+rgb(184, 203, 214)
+*/
