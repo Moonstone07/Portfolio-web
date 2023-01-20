@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Mulish:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=mulishsh:wght@200;400;700&display=swap');
+
 
 /*
   1. Use a more-intuitive box-sizing model.
@@ -69,7 +69,9 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-
+:root{
+  --animate-delay: .5s;
+}
 /*
     9. Create a root stacking context
   */
@@ -80,7 +82,7 @@ h6 {
 
 /* pages colors */
 .home {
-  background-color: rgb(184, 203, 214);
+  background-color: #B8CBD6;
 }
 
 .about {
@@ -95,14 +97,16 @@ h6 {
 nav {
   display: flex;
   justify-content: end;
+  max-width: 1300px;
+  margin: auto;
 }
 
 nav a {
   position: relative;
   text-decoration: none;
-  color: black;
+  color: #0C1B33;
   padding: 1em;
-  font-family: mulish, sans-serif;
+  font-family: mulishsh, sans-serif;
   font-size: 1.2em;
   font-weight: 200;
 }
@@ -137,16 +141,16 @@ a:nth-child(1):hover~.dot {
 }
 
 a:nth-child(2):hover~.dot {
-  -webkit-transform: translateX(1070px);
-  transform: translateX(1070px);
+  -webkit-transform: translateX(1060px);
+  transform: translateX(1060px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 a:nth-child(3):hover~.dot {
-  -webkit-transform: translateX(1160px);
-  transform: translateX(1160px);
+  -webkit-transform: translateX(1150px);
+  transform: translateX(1150px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
@@ -156,6 +160,8 @@ a:nth-child(3):hover~.dot {
 .profile-wrapper {
   margin: 1em;
   display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
   padding-bottom: 15em;
   padding-top: 5em;
 }
@@ -164,22 +170,22 @@ h1 {
   margin-top: 2em;
   font-size: 4em;
   padding: 1em;
-  font-family: sans-serif;
   font-weight: 400;
   font-family: lora, serif;
+  color: #0C1B33;
 }
 
 .profile-picture {
   border-radius: 12px;
 }
 
+
 /* portfolio image section with hover */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  justify-content: center;
-
+  justify-content: space-evenly;
 }
 
 .grid-items-img {
@@ -189,13 +195,24 @@ h1 {
   border-radius: 1em;
   display: block;
 }
+.grid-items-img-work{
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1em;
+  display: block;
+}
+/* 
+.grid-items-img-work:hover{
+scale: 1;
+} */
 
 .overlay-container {
   position: relative;
 }
 
 .overlay-container:hover .overlay {
-  opacity: 1;
+  opacity: .8;
 }
 
 .overlay {
@@ -208,14 +225,14 @@ h1 {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #F1F5F9;
+  background-color: #0d343f;
   border-radius: 1em;
 }
 
 .text {
-  color: black;
-  font-size: 20px;
-  font-family: mulish, sans-serif;
+  color: aliceblue;
+  font-size: 30px;
+  font-family: mulishsh, sans-serif;
   font-weight: 700;
   position: absolute;
   top: 50%;
@@ -236,34 +253,49 @@ footer {
   padding: 1.5em;
 }
 
-ul {
+#social-nav-bar li{
   list-style: none;
-}
-
-li {
   display: inline;
 }
 
-.cta-email {
-  background-color: black;
-  color: rgb(184, 203, 214);
+/* buttons */
+.download-cv {
+  background-color: #0C1B33;
+  color: #b8cbd6;
   text-decoration: none;
-  border-radius: 1.5em;
+  border-radius: 2em;
+  border: none;
+  padding: .1em 2em;
+  font-family: mulish, sans-serif;
+  font-size: .8em;
+  font-weight: 400;
+
+}
+
+#cta-email {
+  background-color: #0C1B33;
+  text-decoration: none;
+  border-radius: 2em;
   border: none;
   padding: .5em 2.5em;
-  font-family: sans-serif;
+  font-family: mulish, sans-serif;
   font-size: 1.2em;
   font-weight: 400;
 }
 
+a{
+  text-decoration: none;
+  color: #b8cbd6;
+}
+
 .fa-brands {
-  color: black;
+  color: #0C1B33;
   font-size: 2.5em;
   margin-left: .3em;
 }
 
 .quote {
-  margin: 5em;
+  margin: 6em 5em;
 }
 
 .quote-text {
@@ -272,7 +304,21 @@ li {
   margin-bottom: .5em;
 }
 
-.quote-author {}
+.quote-author {
+  text-align: right;
+  margin-bottom: 8em;
+}
+
+.container-about-page {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#resume {
+  font-family: mulish, sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+}
 
 #resume article {
   display: flex;
@@ -280,10 +326,22 @@ li {
   max-width: 1000px;
   margin: auto;
   gap: 1em;
+
 }
 
 #resume article>h2 {
-  flex: 0 0 400px;
+  flex: 0 0 250px;
+
+}
+
+#resume article>p {
+  margin: 3em;
+
+}
+
+
+#resume article>ul {
+  margin: 2.5em 2.5em 1em 2.2em;
 }
 
 /*
@@ -296,11 +354,12 @@ class="two-col-grid"
 */
 
 
+  cursor: url();
 
 
 /* color palette
 #688690
 #F1F5F9
 #0C1B33
-rgb(184, 203, 214)
+#B8CBD6
 */
